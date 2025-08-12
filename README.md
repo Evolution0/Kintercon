@@ -1,8 +1,8 @@
-# <img src="resources/minecraft-icon.png" alt="Your image title" width="16"/> Cutercon : Minecraft Remote Console Program 
+# <img src="resources/minecraft-icon.png" alt="Your image title" width="16"/> Kintercon : Minecraft Remote Console Program 
 
-A remote console written in Python, using Qt6 for the GUI.
+A remote console written in Python inspired by [Cutercon](https://github.com/Karsteski/Cutercon), using CustomTkinter for the GUI and RCONClient for communication.
 
-![Program Image](resources/cutercon-gui.png)
+![Program Image](resources/kintercon_v2.png)
 
 ## Minecraft Remote Console Protocol
 
@@ -10,27 +10,27 @@ A remote console written in Python, using Qt6 for the GUI.
 
 ## Usage
 
-This client can be run as a standalone script with the PyQt GUI, or by importing the Cutercon class and doing whatever you'd like.
-
-Example:
-
-```python
-from cutercon import Cutercon
-
-# Note that port 25575 is the default Minecraft RCON port.
-HOST = "192.168.0.10"
-PASSWORD = "password"
-PORT = 25575
-
-with Cutercon(HOST, PASSWORD, PORT) as rcon:
-    rcon.command("say Hello World")
+```commandline
+python kintercon.py
 ```
+
+## Features
+
+Kintercon expands upon the idea of Cutercon by adding SSH support as well as a more fleshed out UI based on CustomTkinter with a dedicated connection panel.
+
+As at its core the UI relies on Tkinter it is incredibly lightweight.
+
+## TODO
+
+- Command history
+- Log panel
+- Separate RCON/SSH input and output and show/hide on tab switch
 
 ## License
 
 MIT License
 
-Copyright (c) 2021 Kareem Stephan Skinner
+Copyright (c) 2023 Anthony Forsberg
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
